@@ -7,8 +7,11 @@
         {% block title %}{% endblock %}
     </title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="shortcut icon" href="{% static 'assets/favicon.ico' %}" type="image/x-icon">
+    <link rel="apple-touch-icon" href="{% static 'assets/favicon.ico' %}">
 </head>
 <body>
+    {% include 'header.html' %}
     {% block content %}{% endblock %}
 </body>
 </html>
