@@ -30,7 +30,6 @@ ALLOWED_HOSTS = []
 # SECURE_SSL_REDIRECT = True
 # SESSION_COOKIE_SECURE = True
 # CSRF_COOKIE_SECURE = True
-# ALLOWED_HOSTS = ['pacowebdev.pythonanywhere.com']
 
 # Application definition
 
