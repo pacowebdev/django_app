@@ -31,9 +31,13 @@ hr {
     margin-top: 1em;
     clear: both;
 }
+li {
+    list-style: georgian;
+    margin-left: 3em;
+}
 
 /* TEXT */
-h1, h2, h3, h4, h5 {
+h1, h2 {
     color: brown;
 }
 a, a:visited {
@@ -51,6 +55,12 @@ header a {
 }
 
 /* CLASS */
+.user {
+    padding: 1em;
+}
+.user p {
+    text-align: center;
+}
 .posts {
     display: flex;
     flex-wrap: wrap;

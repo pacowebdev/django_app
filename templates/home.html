@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    django_app Home
+{% endblock %}
+
+{% block content %}
+    <h1>Home</h1>
+    <section class="post">
+        <a href="{% url 'blog' %}">
+            <h2>Blog</h2>
+        </a>
+        <h3>Liste des posts :</h3>
+        <ul>
+            {% for post in posts %}
+                <li>{{ post.title }}</li>
+            {% endfor %}
+
+        </ul>
+    </section>
+{% endblock %}
