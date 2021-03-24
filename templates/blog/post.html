@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    django_app Post
+{% endblock %}
+
+{% block content %}
+    <a href="{% url 'blog' %}"><= Retour</a>
+    <section class="post-detail">
+        <div>
+            <h2>{{ post_detail.title }}</h2>
+            <h4>{{ post_detail.categorie }}</h4>
+        </div>
+        <img src="{{ post_detail.image.url }}" alt="logo {{ post_detail.title }}">
+        <p>{{ post_detail.content }}</p>
+        <p>{{ message }}</p>
+        <hr>
+        {% for comment in comments %}
+            <h4>{{ comment.pseudo }}</h4>
+            <p>{{ comment.content }}</p>
+            <p>- Publié le {{ comment.date }} -</p>
+        {% endfor %}
+    </section>
+{% endblock %}

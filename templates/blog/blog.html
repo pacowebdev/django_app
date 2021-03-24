@@ -6,4 +6,18 @@
 
 {% block content %}
     <h1>Blog</h1>
+    <section class="posts">
+        {% for post in posts %}
+            <div class="post">
+                <div>
+                    <a href="{% url 'post' post.id %}">
+                        <h2>{{ post.title }}</h2>
+                    </a>
+                    <h3>{{ post.categorie }}</h3>
+                </div>
+                <img src="{{ post.image.url }}" alt="logo {{ post.title }}">
+                <p>{{ post.content }}</p>
+            </div>
+        {% endfor %}
+    </section>
 {% endblock %}
